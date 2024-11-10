@@ -104,6 +104,8 @@ const MyComponent = () => {
         <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaprK0RNpwEPIU20cAbHP0Vl750Tu4wz24GQ&s"} alt="Logo" className="logo" style={{ width: '150px', marginBottom: '30px', borderRadius: '100%' }} />
         <h2 style={{ marginBottom: '30px', fontFamily: "Sofia, cursive", color: '#ffffff' }}>Status weekly visits</h2>
       </div>
+      <div className='table-responsive d-md-none'>
+
       <table className="table table-bordered">
         <thead>
           <tr style={{ textAlign: 'center' }}>
@@ -181,7 +183,7 @@ const MyComponent = () => {
                   readOnly={!row.isEditable}
                 />
               </td>
-              <td>
+              <td className='text-truncate p-1'>
                 <input
                   type="text"
                   name="ماتم"
@@ -230,6 +232,7 @@ const MyComponent = () => {
           ))}
         </tbody>
       </table>
+      </div>
       <button onClick={addRow} className="btn btn-primary" style={{ margin: '10px' }}>
         <i className="fa fa-plus"></i> Add Row
       </button>
