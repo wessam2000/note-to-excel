@@ -1,0 +1,7 @@
+body{
+  background: 
+  linear-gradient(rgba(0, 10, 0, 0.5), rgba(0, 10, 0, 0.5)), /* color overlay */
+  url("https://cdn.pixabay.com/photo/2014/03/22/17/03/the-background-292729_1280.png"); /* background image */
+background-size: cover;
+background-position: center;
+}

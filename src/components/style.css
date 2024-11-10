@@ -1,0 +1,13 @@
+/* Define the animation */
+@keyframes moveRight {
+  0% {
+    transform: translateY(-100px); /* Start position */
+  }
+  100% {
+    transform: translateY(10px); /* End position (moves 200px to the right) */
+  }
+}
+
+h2 {
+  animation: moveRight 2s ease-in-out ; 
+}
