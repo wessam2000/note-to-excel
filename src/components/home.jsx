@@ -104,17 +104,17 @@ const MyComponent = () => {
         <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaprK0RNpwEPIU20cAbHP0Vl750Tu4wz24GQ&s"} alt="Logo" className="logo" style={{ width: '150px', marginBottom: '30px', borderRadius: '100%' }} />
         <h2 style={{ marginBottom: '30px', fontFamily: "Sofia, cursive", color: '#ffffff' }}>Status weekly visits</h2>
       </div>
-      <div className='table-responsive d-md-none'>
+      <div className='table-responsive'>
 
       <table className="table table-bordered">
         <thead>
           <tr style={{ textAlign: 'center' }}>
-            <th style={{ width: '5rem' }}>التاريخ</th>
-            <th style={{ width: '5rem' }}>نوع البلاغ</th>
-            <th style={{ width: '5rem' }}>رقم البلاغ</th>
+            <th style={{ width: '1rem' }}>التاريخ</th>
+            <th style={{ width: '3.5rem' }}>نوع البلاغ</th>
+            <th style={{ width: '5.5rem' }}>رقم البلاغ</th>
             <th style={{ width: '5rem' }}>اسم المشروع</th>
             <th style={{ width: '5rem' }}>الكود</th>
-            <th style={{ width: '3rem' }}>ماتم</th>
+            <th style={{ width: '5.05rem' }}>ماتم</th>
             <th style={{ width: '10rem' }}>ذكرماتم</th>
             <th style={{ width: '8rem' }}>ملاحظات</th>
             <th style={{ width: '8rem' }}></th>
@@ -123,8 +123,9 @@ const MyComponent = () => {
         <tbody>
           {rows.map((row, index) => (
             <tr key={index}>
-              <td>
+              <td style={{ textAlign: 'center' }} >
                 <input
+                style={{ width: '8rem' }}
                   type="date"
                   name="التاريخ"
                   value={row.التاريخ}
@@ -133,12 +134,12 @@ const MyComponent = () => {
                   readOnly={!row.isEditable}
                 />
               </td>
-              <td>
+              <td className='text-nowrap'>
                 <select
                   name="نوع_البلاغ"
                   value={row.نوع_البلاغ}
                   onChange={(e) => handleInputChange(index, e)}
-                  className="form-control"
+                  className="form-select w-100"
                   disabled={!row.isEditable}
                 >
                   <option value="">اختر</option>

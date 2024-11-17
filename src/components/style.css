@@ -12,4 +12,13 @@ h2 {
   animation: moveRight 2s ease-in-out ; 
 }
 
-
+@media (max-width: 576px) {
+  td select {
+    width: 80%;
+    min-width: 200px; /* Adjust based on your content */
+  }
+  td input {
+    width: 100%;
+    min-width: 200px; /* Adjust this as needed */
+  }
+}
