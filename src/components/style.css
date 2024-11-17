@@ -22,3 +22,15 @@ h2 {
     min-width: 200px; /* Adjust this as needed */
   }
 }
+
+@media (max-width: 768px) {
+  td select {
+    width: 80%;
+    min-width: 200px; /* Adjust based on your content */
+  }
+  td input {
+    width: 100%;
+    min-width: 200px; /* Adjust this as needed */
+  }
+}
+
