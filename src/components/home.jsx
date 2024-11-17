@@ -112,7 +112,7 @@ const MyComponent = () => {
             <th style={{ width: '1rem' }}>التاريخ</th>
             <th style={{ width: '3.5rem' }}>نوع البلاغ</th>
             <th style={{ width: '5.5rem' }}>رقم البلاغ</th>
-            <th style={{ width: '5rem' }}>اسم المشروع</th>
+            <th style={{ width: '7rem' }}>اسم المشروع</th>
             <th style={{ width: '5rem' }}>الكود</th>
             <th style={{ width: '5.05rem' }}>ماتم</th>
             <th style={{ width: '10rem' }}>ذكرماتم</th>
@@ -134,7 +134,7 @@ const MyComponent = () => {
                   readOnly={!row.isEditable}
                 />
               </td>
-              <td className='text-nowrap'>
+              <td style={{ width:"4.5rem" }}>
                 <select
                   name="نوع_البلاغ"
                   value={row.نوع_البلاغ}
@@ -150,6 +150,7 @@ const MyComponent = () => {
               </td>
               <td>
                 <input
+                style={{ width:"6.5rem" }}
                   type="text"
                   name="رقم_البلاغ"
                   value={row.رقم_البلاغ}
@@ -165,6 +166,7 @@ const MyComponent = () => {
                   onChange={(e) => handleInputChange(index, e)}
                   className="form-control"
                   disabled={!row.isEditable}
+                  
                 >
                   <option value="">اختر</option>
                   {projectsName.map((project) => (
@@ -184,7 +186,7 @@ const MyComponent = () => {
                   readOnly={!row.isEditable}
                 />
               </td>
-              <td className='text-truncate p-1'>
+              <td className='text-truncate p-1'style={{ width:"5.5rem" }}>
                 <input
                   type="text"
                   name="ماتم"
